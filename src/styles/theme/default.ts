@@ -16,8 +16,10 @@ export default {
     'gray-700': '#181C2A',
     'gray-800': '#0E1116',
 
-    'gradient-green': '#7FD1CC',
-    'gradient-purple': '#9694F5',
+    'gradient-green':
+      'linear-gradient(90deg, rgba(127,209,204,1) 0%, rgba(150,148,245,1) 100%)',
+    'gradient-vertical':
+      'linear-gradient(90deg, rgba(127,209,204,1) 0%, rgba(150,148,245,1) 100%);',
   },
   FONT_SIZE: {
     sm: '0.875rem',

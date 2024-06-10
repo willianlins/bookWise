@@ -1,3 +1,14 @@
+import { MenuSide } from '@/components/Menu-side'
+import { ContainerHome, ContentMain } from './styles'
+
 export default function Home() {
-  return <h1>login</h1>
+  return (
+    <ContainerHome>
+      <MenuSide />
+      <ContentMain>
+        <div>List Content</div>
+        <div>Left Content</div>
+      </ContentMain>
+    </ContainerHome>
+  )
 }
