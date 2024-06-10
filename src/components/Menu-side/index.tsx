@@ -1,6 +1,11 @@
 import Link from 'next/link'
-import { Binoculars, ChartLineUp, SignIn, User } from 'phosphor-react'
-import { ContainerMenu, ContentListMenu, ContentListMenuList } from './styles'
+import { Binoculars, ChartLineUp, SignIn, SignOut, User } from 'phosphor-react'
+import {
+  ButtonLogin,
+  ContainerMenu,
+  ContentListMenu,
+  ContentListMenuList,
+} from './styles'
 
 import logoBoolWise from '@/assets/Logo.png'
 import Image from 'next/image'
@@ -11,19 +16,19 @@ export function MenuSide() {
     <ContainerMenu>
       <Image src={logoBoolWise} quality={100} height={32} alt="" />
       <ContentListMenu>
-        <ContentListMenuList onSelect={true}>
+        <ContentListMenuList selectmenu={true}>
           <Link href="#">
             <ChartLineUp size={24} />
             inicio
           </Link>
         </ContentListMenuList>
-        <ContentListMenuList onSelect={false}>
+        <ContentListMenuList selectmenu={false}>
           <Link href="#">
             <Binoculars size={24} />
             Explorar
           </Link>
         </ContentListMenuList>
-        <ContentListMenuList onSelect={false}>
+        <ContentListMenuList selectmenu={false}>
           <Link href="#">
             {' '}
             <User size={24} />
@@ -31,10 +36,13 @@ export function MenuSide() {
           </Link>
         </ContentListMenuList>
       </ContentListMenu>
-      <button>
-        <Avatar />
+      <ButtonLogin color="green">
         Fazer login <SignIn size={20} />
-      </button>
+      </ButtonLogin>
+      <ButtonLogin color="red">
+        <Avatar />
+        Fazer login <SignOut size={20} />
+      </ButtonLogin>
     </ContainerMenu>
   )
 }

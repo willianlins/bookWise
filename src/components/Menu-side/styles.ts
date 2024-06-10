@@ -1,29 +1,38 @@
 import styled from 'styled-components'
 
 export const ContainerMenu = styled.nav`
+  width: 232px;
   height: 61.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.75rem 3.25rem 1.75rem;
+  align-items: center;
+  padding: 2.75rem 0 1.75rem;
   background-image: url('Background-sidebar.png');
   border-radius: 12px;
   object-fit: cover;
+`
 
-  button {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: ${(props) => props.theme.COLORS['gray-200']};
-    cursor: pointer;
-    svg {
-      color: ${(props) => props.theme.COLORS['green-100']};
-    }
+interface ButtonLoginProps {
+  color: 'red' | 'green'
+}
+
+export const ButtonLogin = styled.button<ButtonLoginProps>`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: ${(props) => props.theme.COLORS['gray-200']};
+  cursor: pointer;
+  svg {
+    ${(props) =>
+      props.color === 'green'
+        ? `color: ${props.theme.COLORS['green-100']};`
+        : `color: ${props.theme.COLORS.red};`}
   }
 `
 
 interface ContentListMenuListProps {
-  onSelect: boolean
+  selectmenu: boolean
 }
 
 export const ContentListMenu = styled.ul`
@@ -52,7 +61,7 @@ export const ContentListMenuList = styled.li<ContentListMenuListProps>`
   }
 
   ${(props) =>
-    props.onSelect &&
+    props.selectmenu &&
     `
     color: ${props.theme.COLORS['gray-100']};
     &::before {

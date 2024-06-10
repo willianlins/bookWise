@@ -1,5 +1,7 @@
 export default {
   COLORS: {
+    red: '#F75A68',
+
     'green-100': '#50B2C0',
     'green-200': '#255D6A',
     'green-300': '#0A313C',
@@ -16,7 +18,7 @@ export default {
     'gray-700': '#181C2A',
     'gray-800': '#0E1116',
 
-    'gradient-green':
+    'gradient-horizontal':
       'linear-gradient(90deg, rgba(127,209,204,1) 0%, rgba(150,148,245,1) 100%)',
     'gradient-vertical':
       'linear-gradient(90deg, rgba(127,209,204,1) 0%, rgba(150,148,245,1) 100%);',
