@@ -11,7 +11,16 @@ export default function Login() {
   const router = useRouter()
 
   async function handleConnectWithAccount(type: string) {
-    await router.push('/visitant/')
+    switch (type) {
+      case 'google':
+        console.log('Login with google')
+        break
+      case 'github':
+        console.log('github')
+        break
+      default:
+        await router.push('/visitant/')
+    }
   }
 
   return (
@@ -29,6 +38,7 @@ export default function Login() {
               quality={100}
               src={googleLogo}
               alt="Imagem ilustrando a letra G do google"
+              fetchPriority={undefined}
             />
             <span>Entrar com Google</span>
           </ConnectType>
