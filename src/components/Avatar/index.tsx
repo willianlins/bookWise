@@ -1,16 +1,16 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-import AvatarUser from '@/assets/avatarUser.jpg'
 import { ContainerAvatar } from './styles'
 
 interface AvatarProps {
-  size?: 'small' | 'medium'
+  size?: 'small' | 'medium' | 'large'
+  imagesrc: StaticImageData
 }
 
-export function Avatar({ size = 'small' }: AvatarProps) {
+export function Avatar({ size = 'small', imagesrc }: AvatarProps) {
   return (
     <ContainerAvatar size={size}>
-      <Image src={AvatarUser} alt="" quality={100} />
+      <Image src={imagesrc} alt="" quality={100} />
     </ContainerAvatar>
   )
 }

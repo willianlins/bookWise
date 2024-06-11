@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ContainerMenu = styled.nav`
   width: 232px;
-  height: 61.75rem;
+  height: 56rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -14,7 +14,7 @@ export const ContainerMenu = styled.nav`
 `
 
 interface ButtonLoginProps {
-  color: 'red' | 'green'
+  $color: 'red' | 'green'
 }
 
 export const ButtonLogin = styled.button<ButtonLoginProps>`
@@ -25,23 +25,24 @@ export const ButtonLogin = styled.button<ButtonLoginProps>`
   cursor: pointer;
   svg {
     ${(props) =>
-      props.color === 'green'
+      props.$color === 'green'
         ? `color: ${props.theme.COLORS['green-100']};`
         : `color: ${props.theme.COLORS.red};`}
   }
 `
 
-interface ContentListMenuListProps {
-  selectmenu: boolean
-}
-
 export const ContentListMenu = styled.ul`
+  width: 100%;
   flex: 1;
-
+  padding: 0 2.75rem;
   margin-top: 4rem;
   list-style: none;
   color: ${(props) => props.theme.COLORS['gray-400']};
 `
+interface ContentListMenuListProps {
+  $selectmenu: boolean
+}
+
 export const ContentListMenuList = styled.li<ContentListMenuListProps>`
   display: flex;
   a {
@@ -60,17 +61,19 @@ export const ContentListMenuList = styled.li<ContentListMenuListProps>`
     color: ${(props) => props.theme.COLORS['gray-100']};
   }
 
+  &::before {
+    content: '';
+    display: block;
+    width: 0.25rem;
+    margin-right: 1rem;
+    border-radius: ${(props) => props.theme.RADII.full};
+  }
+
   ${(props) =>
-    props.selectmenu &&
+    props.$selectmenu &&
     `
     color: ${props.theme.COLORS['gray-100']};
     &::before {
-        content: '';
-        display: block;
-        width: 0.25rem;
-        margin-right: 0.75rem;
-         
-        border-radius: ${props.theme.RADII.full};
         background: ${props.theme.COLORS['gradient-vertical']};
     `};
 `

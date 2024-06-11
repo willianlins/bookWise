@@ -3,10 +3,41 @@ import styled from 'styled-components'
 export const ContainerHome = styled.main`
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   padding: 1.25rem;
 `
 
 export const ContentMain = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-left: 5.938rem;
+`
+export const ContentWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 38rem 20.25rem;
+  margin-top: 1rem;
+`
+
+export const ContentSectionHeader = styled.header`
+  margin-top: 4.5rem;
+  font-size: ${(props) => props.theme.FONT_SIZE.sm};
+
+  div {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: ${(props) => props.theme.FONT_SIZE['2xl']};
+  }
+
+  svg {
+    color: ${(props) => props.theme.COLORS['green-100']};
+  }
+`
+
+export const ContainerSections = styled.article`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `

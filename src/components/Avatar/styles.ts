@@ -1,7 +1,22 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 interface ContainerAvatarProps {
-  size: 'small' | 'medium'
+  size: 'small' | 'medium' | 'large'
+}
+
+const ContainerAvatarVariant = {
+  small: css`
+    width: 2rem;
+    height: 2rem;
+  `,
+  medium: css`
+    width: 2.5rem;
+    height: 2.5rem;
+  `,
+  large: css`
+    width: 4.5rem;
+    height: 4.5rem;
+  `,
 }
 
 export const ContainerAvatar = styled.div<ContainerAvatarProps>`
@@ -11,20 +26,8 @@ export const ContainerAvatar = styled.div<ContainerAvatarProps>`
   border: 2px solid transparent;
   background: ${(props) => props.theme.COLORS['gradient-horizontal']};
 
-  ${(props) =>
-    props.size === 'small'
-      ? `
-      img {
-        width: 2rem;
-        height: 2rem;
-        object-fit: cover;
-      }
-  `
-      : `
-      img {
-        width: 4.5rem;
-        height: 4.5rem;
-        object-fit: cover;
-      }
-  `}
+  img {
+    ${(props) => ContainerAvatarVariant[props.size]}
+    object-fit: cover;
+  }
 `
