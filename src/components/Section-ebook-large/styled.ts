@@ -6,6 +6,16 @@ export const ContainerSection = styled.section`
   background: ${(props) => props.theme.COLORS['gray-700']};
   border-radius: 8px;
   padding: 1.25rem;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+
+  button {
+    cursor: pointer;
+  }
+
+  &:hover {
+    border-color: ${(props) => props.theme.COLORS['gray-500']};
+  }
 `
 
 export const ContainerHeader = styled.header`
@@ -54,7 +64,7 @@ export const ContentArticle = styled.article`
     color: ${(props) => props.theme.COLORS['gray-300']};
   }
 
-  button {
+  strong {
     font-size: ${(props) => props.theme.FONT_SIZE.sm};
     line-height: 160%;
     font-weight: bold;

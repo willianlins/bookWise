@@ -14,18 +14,30 @@ const containerAsideSectionVariant = {
   `,
 }
 
-export const ContainerAsideSection = styled.div<ContainerAsideSectionProps>`
-  height: 8.125rem;
+export const ContainerAsideSection = styled.button<ContainerAsideSectionProps>`
+  min-height: 8.125rem;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
   padding: 1rem;
-
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
   background-color: ${(props) => props.theme.COLORS['gray-700']};
+  transition: border 0.2s;
 
   img {
     ${(props) => containerAsideSectionVariant[props.size]}
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &:hover {
+    border-color: ${(props) => props.theme.COLORS['gray-500']};
   }
 `
 
