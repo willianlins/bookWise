@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import backgroundMenuAside from '@/assets/Background-sidebar.png'
+
 export const ContainerMenu = styled.nav`
   width: 232px;
   height: 56rem;
@@ -8,7 +10,7 @@ export const ContainerMenu = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 2.75rem 0 1.75rem;
-  background-image: url('Background-sidebar.png');
+  background-image: url('${backgroundMenuAside.src}');
   border-radius: 12px;
   object-fit: cover;
 `

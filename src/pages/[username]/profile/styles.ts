@@ -35,14 +35,6 @@ export const ContentSectionHeader = styled.header`
   }
 `
 
-export const ContainerSections = styled.article`
-  display: flex;
-  flex-direction: column;
-
-  section + section {
-    margin-top: 0.75rem;
-  }
-`
 export const ContentAside = styled.aside`
   margin-left: 4rem;
   display: flex;
@@ -50,80 +42,5 @@ export const ContentAside = styled.aside`
 
   button + button {
     margin-top: 0.75rem;
-  }
-`
-
-export const ContentSectionsInfo = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: ${(props) => props.theme.FONT_SIZE.sm};
-  margin-bottom: 1rem;
-  a {
-    display: flex;
-    justify-content: center;
-    gap: 0.175rem;
-    color: ${(props) => props.theme.COLORS['purple-100']};
-    font-weight: bold;
-    svg {
-      line-height: 100%;
-    }
-  }
-`
-
-export const ContainerSectionRead = styled.section`
-  width: 38rem;
-  height: 12rem;
-  background: ${(props) => props.theme.COLORS['gray-700']};
-  border-radius: 8px;
-  padding: 1.25rem;
-  border: 1px solid transparent;
-  transition: border-color 0.2s;
-  margin-bottom: 3rem;
-
-  button {
-    cursor: pointer;
-  }
-
-  &:hover {
-    border-color: ${(props) => props.theme.COLORS['gray-500']};
-  }
-`
-
-export const ContentArticle = styled.article`
-  display: flex;
-  gap: 1.25rem;
-
-  h2 {
-    font-size: ${(props) => props.theme.FONT_SIZE.md};
-    line-height: 140%;
-  }
-
-  span {
-    font-size: ${(props) => props.theme.FONT_SIZE.sm};
-    color: ${(props) => props.theme.COLORS['gray-400']};
-  }
-
-  p {
-    margin-top: 1.25rem;
-    font-size: ${(props) => props.theme.FONT_SIZE.sm};
-    line-height: 160%;
-    color: ${(props) => props.theme.COLORS['gray-300']};
-  }
-
-  strong {
-    font-size: ${(props) => props.theme.FONT_SIZE.sm};
-    line-height: 160%;
-    font-weight: bold;
-    color: ${(props) => props.theme.COLORS['purple-100']};
-  }
-`
-export const ContentInfoRating = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-
-  span {
-    font-size: ${(props) => props.theme.FONT_SIZE.sm};
   }
 `
