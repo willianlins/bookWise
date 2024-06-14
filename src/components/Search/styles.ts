@@ -8,6 +8,7 @@ export const ContentInputSearch = styled.div`
   padding: 0.875rem 1rem;
   gap: 1rem;
   border: 1px solid ${(props) => props.theme.COLORS['gray-500']};
+  color: ${(props) => props.theme.COLORS['gray-500']};
 
   input {
     flex: 1;
@@ -20,5 +21,14 @@ export const ContentInputSearch = styled.div`
       font-size: ${(props) => props.theme.FONT_SIZE.sm};
       font-family: ${(props) => props.theme.FONT.default};
     }
+  }
+
+  button {
+    line-height: 0;
+    cursor: pointer;
+  }
+
+  &:has(input:focus) {
+    border-color: ${(props) => props.theme.COLORS['green-200']};
   }
 `

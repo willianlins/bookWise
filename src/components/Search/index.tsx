@@ -6,7 +6,9 @@ export function Search() {
     <ContainerForm>
       <ContentInputSearch>
         <input type="text" placeholder="Buscar livro avaliado" />
-        <MagnifyingGlass size={20} />
+        <button>
+          <MagnifyingGlass size={20} />
+        </button>
       </ContentInputSearch>
     </ContainerForm>
   )

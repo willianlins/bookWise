@@ -1,4 +1,3 @@
-import { ContainerForm } from '@/components/Search/styles'
 import styled from 'styled-components'
 
 export const ContainerHome = styled.main`
@@ -16,10 +15,6 @@ export const ContentWrapper = styled.div`
   display: grid;
   grid-template-columns: 38rem 24.25rem;
   margin-top: 1rem;
-
-  ${ContainerForm} {
-    margin-bottom: 2rem;
-  }
 `
 
 export const ContentSectionHeader = styled.header`
@@ -37,15 +32,5 @@ export const ContentSectionHeader = styled.header`
 
   svg {
     color: ${(props) => props.theme.COLORS['green-100']};
-  }
-`
-
-export const ContentAside = styled.aside`
-  margin-left: 4rem;
-  display: flex;
-  flex-direction: column;
-
-  button + button {
-    margin-top: 0.75rem;
   }
 `

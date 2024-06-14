@@ -35,7 +35,7 @@ export default {
     base: '160%',
   },
   FONT: {
-    default: 'Nunito, sans-serif',
+    default: "'Nunito Sans', sans-serif",
   },
   RADII: {
     md: '8px',
