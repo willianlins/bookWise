@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const ContainerSections = styled.article`
   display: flex;
   flex-direction: column;
+  /* margin-top: 2rem; */
 
   section + section {
     margin-top: 0.75rem;

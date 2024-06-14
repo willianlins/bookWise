@@ -10,6 +10,7 @@ import { User } from 'phosphor-react'
 
 import bookTeste from '@/assets/Book_teste.png'
 import { SectioMyEbook } from './components/Section-my-ebook'
+import { Search } from '@/components/Search'
 
 export default function Home() {
   return (
@@ -22,8 +23,10 @@ export default function Home() {
             <h1>Perfil</h1>
           </div>
         </ContentSectionHeader>
+
         <ContentWrapper>
           <div>
+            <Search />
             <SectioMyEbook imageSrc={bookTeste} />
             <SectioMyEbook imageSrc={bookTeste} />
             <SectioMyEbook imageSrc={bookTeste} />
@@ -31,7 +34,7 @@ export default function Home() {
             <SectioMyEbook imageSrc={bookTeste} />
             <SectioMyEbook imageSrc={bookTeste} />
           </div>
-          <ContentAside></ContentAside>
+          <ContentAside>ss</ContentAside>
         </ContentWrapper>
       </ContentMain>
     </ContainerHome>
