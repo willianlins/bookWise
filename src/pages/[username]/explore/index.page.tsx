@@ -16,6 +16,7 @@ export default function Explore() {
           <div>
             <Binoculars size={32} />
             <h1>Explorar</h1>
+            <p>s</p>
           </div>
         </ContentSectionHeader>
         <ContentWrapper></ContentWrapper>
