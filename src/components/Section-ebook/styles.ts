@@ -20,7 +20,7 @@ export const ContainerAsideSection = styled.button<ContainerAsideSectionProps>`
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.RADII.md};
   border: 1px solid transparent;
   cursor: pointer;
   background-color: ${(props) => props.theme.COLORS['gray-700']};

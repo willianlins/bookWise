@@ -4,7 +4,7 @@ export const ContainerSection = styled.section`
   width: 38rem;
   height: 17.5rem;
   background: ${(props) => props.theme.COLORS['gray-700']};
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.RADII.md};
   padding: 1.25rem;
   border: 1px solid transparent;
   transition: border-color 0.2s;

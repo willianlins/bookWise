@@ -9,7 +9,7 @@ import {
 
 import bookTeste from '@/assets/Book_teste.png'
 import Image from 'next/image'
-import { Rating } from 'react-simple-star-rating'
+import { RatingEbook } from '../Rating-ebook/indext'
 
 export function SectionEbookLarge() {
   return (
@@ -23,13 +23,7 @@ export function SectionEbookLarge() {
               <span>Hoje</span>
             </div>
           </ContentUser>
-          <Rating
-            initialValue={2}
-            fillColor="#8381D9"
-            size={16}
-            readonly={true}
-            allowFraction={true}
-          />
+          <RatingEbook />
         </ContainerHeader>
         <ContentArticle>
           <Image src={bookTeste} height={152} alt="" />

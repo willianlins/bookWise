@@ -1,10 +1,10 @@
 import ebookTeste from '@/assets/Book_teste.png'
 import Image from 'next/image'
-import { Rating } from 'react-simple-star-rating'
 import { ContainerAsideSection, ContentInfo } from './styles'
 
 import * as Dialog from '@radix-ui/react-dialog'
 import { ModalEbook } from '../Modal-ebook'
+import { RatingEbook } from '../Rating-ebook/indext'
 
 interface SectioneBookProps {
   size?: 'small' | 'medium'
@@ -13,7 +13,7 @@ interface SectioneBookProps {
 export function SectioneBook({ size = 'small' }: SectioneBookProps) {
   return (
     <Dialog.Root>
-      <Dialog.Trigger>
+      <Dialog.Trigger asChild>
         <ContainerAsideSection size={size}>
           <Image src={ebookTeste} alt="" quality={100} />
           <div>
@@ -21,13 +21,7 @@ export function SectioneBook({ size = 'small' }: SectioneBookProps) {
               <h2>A evolução dos bichos</h2>
               <span>George Orwell</span>
             </ContentInfo>
-            <Rating
-              initialValue={2}
-              fillColor="#8381D9"
-              size={16}
-              readonly={true}
-              allowFraction={true}
-            />
+           <RatingEbook />
           </div>
         </ContainerAsideSection>
       </Dialog.Trigger>

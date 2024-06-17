@@ -32,7 +32,7 @@ export const ContainerSectionRead = styled.section`
   width: 38rem;
   min-height: 12rem;
   background: ${(props) => props.theme.COLORS['gray-700']};
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.RADII.md};
   padding: 1.25rem;
   border: 1px solid transparent;
   transition: border-color 0.2s;
