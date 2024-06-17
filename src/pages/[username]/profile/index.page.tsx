@@ -27,7 +27,7 @@ export default function Home() {
 
         <ContentWrapper>
           <div>
-            <Search />
+            <Search placeHolderName="Buscar livro avaliado" />
             <SectioMyEbook imageSrc={bookTeste} />
             <SectioMyEbook imageSrc={bookTeste} />
             <SectioMyEbook imageSrc={bookTeste} />

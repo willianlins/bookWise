@@ -12,12 +12,15 @@ export const ContentMain = styled.div`
   margin-left: 5.938rem;
 `
 export const ContentWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 38rem 24.25rem;
-  margin-top: 1rem;
+  width: 62.25rem;
+  height: 20px;
 `
 
 export const ContentSectionHeader = styled.header`
+  display: grid;
+  grid-template-columns: 1fr 27rem;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 4.5rem;
 
   div {
@@ -33,4 +36,16 @@ export const ContentSectionHeader = styled.header`
   svg {
     color: ${(props) => props.theme.COLORS['green-100']};
   }
+`
+
+export const ContainerTopics = styled.nav`
+  display: flex;
+  gap: 1rem;
+`
+
+export const ContainerSectionsBook = styled.section`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
 `
