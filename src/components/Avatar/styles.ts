@@ -28,6 +28,7 @@ export const ContainerAvatar = styled.div<ContainerAvatarProps>`
 
   img {
     ${(props) => ContainerAvatarVariant[props.size]}
+
     object-fit: cover;
   }
 `

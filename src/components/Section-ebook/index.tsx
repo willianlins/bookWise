@@ -21,7 +21,7 @@ export function SectioneBook({ size = 'small' }: SectioneBookProps) {
               <h2>A evolução dos bichos</h2>
               <span>George Orwell</span>
             </ContentInfo>
-           <RatingEbook />
+            <RatingEbook />
           </div>
         </ContainerAsideSection>
       </Dialog.Trigger>
