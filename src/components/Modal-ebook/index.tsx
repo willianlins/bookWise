@@ -11,7 +11,7 @@ import { X } from 'phosphor-react'
 import Image from 'next/image'
 
 import ebookTest from '@/assets/Book_teste.png'
-import { RatingEbook } from '../Rating-ebook/indext'
+import { RatingEbook } from '../Rating-ebook'
 
 export function ModalEbook() {
   return (
@@ -25,13 +25,15 @@ export function ModalEbook() {
           <EbookInfo>
             <Image src={ebookTest} alt="" height={240} />
             <div>
-              <h2>14 Hábitos de Desenvolvedores Altamente Produtivos</h2>
-              <span>Zeno Rocha</span>
+              <div>
+                <h2>14 Hábitos de Desenvolvedores Altamente Produtivos</h2>
+                <span>Zeno Rocha</span>
+              </div>
+              <EbookRating>
+                <RatingEbook sizes={20}/>
+                <span>3 avaliação</span>
+              </EbookRating>
             </div>
-            <EbookRating>
-              <RatingEbook />
-              <span>3 avaliação</span>
-            </EbookRating>
           </EbookInfo>
         </EbookWrapperInfo>
       </Content>

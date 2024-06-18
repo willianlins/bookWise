@@ -9,7 +9,7 @@ import {
 
 import bookTeste from '@/assets/Book_teste.png'
 import Image from 'next/image'
-import { RatingEbook } from '../Rating-ebook/indext'
+import { RatingEbook } from '../Rating-ebook'
 
 export function SectionEbookLarge() {
   return (

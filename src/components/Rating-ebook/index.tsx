@@ -1,11 +1,15 @@
 import { Rating } from 'react-simple-star-rating'
 
-export function RatingEbook() {
+interface RatingEbookProps {
+  sizes?: number
+}
+
+export function RatingEbook({sizes = 16}:RatingEbookProps ) {
   return (
     <Rating
-      initialValue={2}
+      initialValue={3}
       fillColor="#8381D9"
-      size={16}
+      size={sizes}
       readonly={true}
       allowFraction={true}
     />

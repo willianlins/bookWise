@@ -37,10 +37,8 @@ export const EbookWrapperInfo = styled.div`
 
 export const EbookInfo = styled.div`
   flex: 1;
-  height: 15rem;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
 
@@ -48,12 +46,29 @@ export const EbookInfo = styled.div`
     display: block;
   }
 
-  div{
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    h2 {
+      font-size: ${({theme})=> theme.FONT_SIZE.lg};
+      margin-bottom: 0.625rem;
+      line-height: 140%;
+    }
+
+    span {
+      color: ${({theme}) => theme.COLORS['gray-300']};
+   
+    }
+    
   }
 
 `
 
 export const EbookRating = styled.div`
-  
+  span {
+    color: ${({theme})=> theme.COLORS['gray-400']};
+    font-size: ${({theme})=> theme.FONT_SIZE.sm};
+  }
 `

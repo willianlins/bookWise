@@ -4,7 +4,7 @@ import { ContainerAsideSection, ContentInfo } from './styles'
 
 import * as Dialog from '@radix-ui/react-dialog'
 import { ModalEbook } from '../Modal-ebook'
-import { RatingEbook } from '../Rating-ebook/indext'
+import { RatingEbook } from '../Rating-ebook'
 
 interface SectioneBookProps {
   size?: 'small' | 'medium'
