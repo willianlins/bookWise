@@ -134,15 +134,17 @@ export const ComentWrapperHeader = styled.header`
   }
 `
 
-export const ContainerCommentAddUser = styled.div`
+export const ContainerCommentAddUser = styled.form`
   padding: 1.5rem;
-  background: ${({theme}) => theme.COLORS['gray-700']};
-  border-radius: ${({theme}) => theme.RADII.md};
+  background: ${({ theme }) => theme.COLORS['gray-700']};
+  border-radius: ${({ theme }) => theme.RADII.md};
+  margin-bottom: 0.75rem;
 `
 
 export const CommentAddUserHeader = styled.header`
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 
   div {
     display: flex;
@@ -151,12 +153,69 @@ export const CommentAddUserHeader = styled.header`
   }
 
   h3 {
-    font-size: ${({theme}) => theme.FONT_SIZE.md};
+    font-size: ${({ theme }) => theme.FONT_SIZE.md};
   }
-
 `
 
 export const CommentAvatarUser = styled.div``
 
+export const ContentAddComent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
-export const ContentAddComent = styled.div``
+  textarea {
+    background-color: ${({ theme }) => theme.COLORS['gray-800']};
+    border: 1px solid ${({ theme }) => theme.COLORS['gray-500']};
+    padding: 1rem;
+    height: 10.25rem;
+    resize: none;
+    border-radius: 4px;
+    font-family: ${({ theme }) => theme.FONT.default};
+    color: ${({ theme }) => theme.COLORS['gray-400']};
+    margin-bottom: 0.75rem;
+
+    &::placeholder {
+      color: ${({ theme }) => theme.COLORS['gray-400']};
+    }
+
+    &:focus {
+      border-color: ${(props) => props.theme.COLORS['green-200']};
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-left: auto;
+
+   
+   
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    background: ${({theme}) => theme.COLORS['gray-600']};
+    transition: background-color 0.2s;
+
+    &:first-child{
+      color: ${({theme}) => theme.COLORS['purple-100']};
+    }
+
+
+    &:last-child{
+      color: ${({theme}) => theme.COLORS['green-100']};
+    }
+
+    &:hover {
+      background: ${({theme}) => theme.COLORS['gray-500']};
+    }
+  }
+
+`

@@ -80,13 +80,15 @@ export function ModalEbook() {
                 <RatingEbook sizes={28} />
               </CommentAddUserHeader>
               <ContentAddComent>
-                <textarea />
-                <button>
-                  <X size={24}/>
-                </button>
-                <button>
-                  <Check size={24}/>
-                </button>
+                <textarea placeholder="Excreva sua avaliação" maxLength={450} />
+                <div>
+                  <button >
+                    <X size={24} />
+                  </button>
+                  <button>
+                    <Check size={24} />
+                  </button>
+                </div>
               </ContentAddComent>
             </ContainerCommentAddUser>
             <CommentUser />
