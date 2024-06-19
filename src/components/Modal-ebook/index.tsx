@@ -82,7 +82,7 @@ export function ModalEbook() {
               <ContentAddComent>
                 <textarea placeholder="Excreva sua avaliação" maxLength={450} />
                 <div>
-                  <button >
+                  <button>
                     <X size={24} />
                   </button>
                   <button>

@@ -189,9 +189,6 @@ export const ContentAddComent = styled.div`
     flex-direction: row;
     gap: 0.5rem;
     margin-left: auto;
-
-   
-   
   }
 
   button {
@@ -201,21 +198,19 @@ export const ContentAddComent = styled.div`
     cursor: pointer;
     padding: 4px;
     border-radius: 4px;
-    background: ${({theme}) => theme.COLORS['gray-600']};
+    background: ${({ theme }) => theme.COLORS['gray-600']};
     transition: background-color 0.2s;
 
-    &:first-child{
-      color: ${({theme}) => theme.COLORS['purple-100']};
+    &:first-child {
+      color: ${({ theme }) => theme.COLORS['purple-100']};
     }
 
-
-    &:last-child{
-      color: ${({theme}) => theme.COLORS['green-100']};
+    &:last-child {
+      color: ${({ theme }) => theme.COLORS['green-100']};
     }
 
     &:hover {
-      background: ${({theme}) => theme.COLORS['gray-500']};
+      background: ${({ theme }) => theme.COLORS['gray-500']};
     }
   }
-
 `
