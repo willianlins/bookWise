@@ -7,6 +7,7 @@ import {
   CommentWrapper,
   ContainerCommentAddUser,
   Content,
+  ContentAddComent,
   EbookContent,
   EbookInfo,
   EbookRating,
@@ -14,14 +15,13 @@ import {
   EbookWrapperInfo,
   Overlay,
 } from './styles'
-import { BookOpen, BookmarkSimple, X } from 'phosphor-react'
+import { BookOpen, BookmarkSimple, Check, X } from 'phosphor-react'
 import Image from 'next/image'
 
 import ebookTest from '@/assets/Book_teste.png'
 import { RatingEbook } from '../Rating-ebook'
 import { CommentUser } from '../Comment-user'
 import { Avatar } from '../Avatar'
-
 
 import userAvatar from '@/assets/avatarUser.jpg'
 
@@ -79,6 +79,15 @@ export function ModalEbook() {
                 </CommentAvatarUser>
                 <RatingEbook sizes={28} />
               </CommentAddUserHeader>
+              <ContentAddComent>
+                <textarea />
+                <button>
+                  <X size={24}/>
+                </button>
+                <button>
+                  <Check size={24}/>
+                </button>
+              </ContentAddComent>
             </ContainerCommentAddUser>
             <CommentUser />
             <CommentUser />

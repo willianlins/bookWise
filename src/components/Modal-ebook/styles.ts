@@ -134,9 +134,29 @@ export const ComentWrapperHeader = styled.header`
   }
 `
 
+export const ContainerCommentAddUser = styled.div`
+  padding: 1.5rem;
+  background: ${({theme}) => theme.COLORS['gray-700']};
+  border-radius: ${({theme}) => theme.RADII.md};
+`
 
-export const ContainerCommentAddUser = styled.div``
+export const CommentAddUserHeader = styled.header`
+  display: flex;
+  justify-content:space-between;
 
-export const CommentAddUserHeader = styled.header``
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h3 {
+    font-size: ${({theme}) => theme.FONT_SIZE.md};
+  }
+
+`
 
 export const CommentAvatarUser = styled.div``
+
+
+export const ContentAddComent = styled.div``

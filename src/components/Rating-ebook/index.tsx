@@ -1,14 +1,13 @@
 import { Rating, RatingProps } from 'react-simple-star-rating'
 
-interface RatingEbookProps {
+interface RatingEbookProps extends RatingProps {
   sizes?: number
-  rest: RatingProps
 }
 
 export function RatingEbook({ sizes = 16, ...rest }: RatingEbookProps) {
   return (
     <Rating
-      initialValue={3}
+      // initialValue={3}
       fillColor="#8381D9"
       size={sizes}
       // readonly
