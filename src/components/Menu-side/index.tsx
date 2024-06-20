@@ -14,16 +14,16 @@ import {
 
 import logoBoolWise from '@/assets/Logo.png'
 import Image from 'next/image'
-// import { Avatar } from '../Avatar'
-// import AvatarUser from '@/assets/avatarUser.jpg'
+import { useRouter } from 'next/router'
 
 export function MenuSide() {
+
   return (
     <ContainerMenu>
       <Image src={logoBoolWise} quality={100} height={32} alt="" />
       <ContentListMenu>
         <ContentListMenuList $selectmenu={true}>
-          <Link href="#">
+          <Link href="/">
             <ChartLineUp size={24} />
             inicio
           </Link>
