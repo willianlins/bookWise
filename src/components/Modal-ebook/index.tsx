@@ -24,6 +24,7 @@ import { CommentUser } from '../Comment-user'
 import { Avatar } from '../Avatar'
 
 import userAvatar from '@/assets/avatarUser.jpg'
+import { LoginModal } from '../Login-modal'
 
 export function ModalEbook() {
   return (
@@ -67,7 +68,12 @@ export function ModalEbook() {
           <CommentWrapper>
             <ComentWrapperHeader>
               <span>Avaliação</span>
-              <button>Avaliar</button>
+              <Dialog.Root>
+                <Dialog.Trigger asChild>
+                  <button>Avaliar</button>
+                </Dialog.Trigger>
+                <LoginModal />
+              </Dialog.Root>
             </ComentWrapperHeader>
             <ContainerCommentAddUser>
               <CommentAddUserHeader>

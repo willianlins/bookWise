@@ -33,7 +33,6 @@ export const ContentRight = styled.div`
     button + button {
       margin-top: 1rem;
     }
-
   }
 
   @media (max-width: 1250px) {

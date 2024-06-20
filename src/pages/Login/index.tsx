@@ -38,19 +38,19 @@ export default function Login() {
             imageUrl={googleLogo}
             onConnectWithAccount={() => handleConnectWithAccount('google')}
             typeText="Entrar com Google"
-            description='Imagem ilustrando a letra G do google'
+            description="Imagem ilustrando a letra G do google"
           />
           <ConnectTypeBtn
             imageUrl={gitHubLogo}
             onConnectWithAccount={() => handleConnectWithAccount('github')}
             typeText="Entrar com GitHub"
-            description='Imagem ilustrando o icone do github'
+            description="Imagem ilustrando o icone do github"
           />
           <ConnectTypeBtn
             imageUrl={rocketLogo}
             onConnectWithAccount={() => handleConnectWithAccount('visitant')}
             typeText="Acessar como visitante"
-            description='Imagem ilustrando um icone de um foguete'
+            description="Imagem ilustrando um icone de um foguete"
           />
         </div>
       </ContentRight>
