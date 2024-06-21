@@ -8,7 +8,6 @@ import googleLogo from '@/assets/google_logo.png'
 import gitHubLogo from '@/assets/git_hub_logo.png'
 
 export function LoginModal() {
-
   async function handleConnectWithAccount(type: string) {
     const router = useRouter()
     switch (type) {
@@ -32,17 +31,17 @@ export function LoginModal() {
         </CloseButton>
         <p>Faça login para deixar sua avaliação</p>
         <ConnectTypeBtn
-            imageUrl={googleLogo}
-            onConnectWithAccount={() => handleConnectWithAccount('google')}
-            typeText="Entrar com Google"
-            description="Imagem ilustrando a letra G do google"
-          />
-          <ConnectTypeBtn
-            imageUrl={gitHubLogo}
-            onConnectWithAccount={() => handleConnectWithAccount('github')}
-            typeText="Entrar com GitHub"
-            description="Imagem ilustrando o icone do github"
-          />
+          imageUrl={googleLogo}
+          onConnectWithAccount={() => handleConnectWithAccount('google')}
+          typeText="Entrar com Google"
+          description="Imagem ilustrando a letra G do google"
+        />
+        <ConnectTypeBtn
+          imageUrl={gitHubLogo}
+          onConnectWithAccount={() => handleConnectWithAccount('github')}
+          typeText="Entrar com GitHub"
+          description="Imagem ilustrando o icone do github"
+        />
       </Content>
     </Dialog.Portal>
   )

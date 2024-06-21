@@ -19,22 +19,20 @@ export const Content = styled(Dialog.Content)`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   p {
-    margin-bottom: 2.5rem; 
+    margin-bottom: 2.5rem;
   }
 
   button + button {
     margin-top: 1rem;
   }
-
 `
-
 
 export const CloseButton = styled(Dialog.Close)`
   cursor: pointer;
@@ -43,4 +41,5 @@ export const CloseButton = styled(Dialog.Close)`
   top: 0;
   right: 0;
   margin-right: 1rem;
-  color: ${({ theme }) => theme.COLORS['gray-400']};`
+  color: ${({ theme }) => theme.COLORS['gray-400']};
+`

@@ -17,7 +17,6 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 export function MenuSide() {
-
   return (
     <ContainerMenu>
       <Image src={logoBoolWise} quality={100} height={32} alt="" />

@@ -7,6 +7,9 @@ import gitHubLogo from '@/assets/git_hub_logo.png'
 import rocketLogo from '@/assets/Rocket_launch_logo.png'
 import { useRouter } from 'next/router'
 import { ConnectTypeBtn } from '@/components/Connect-type-btn'
+import { signIn, useSession } from 'next-auth/react'
+import { DateTime } from 'next-auth/providers/kakao'
+import { getServerSession } from 'next-auth/next'
 
 export default function Login() {
   const router = useRouter()
@@ -17,7 +20,8 @@ export default function Login() {
         console.log('Login with google')
         break
       case 'github':
-        console.log('github')
+        router.push('/visitant/')
+        // await signIn()
         break
       default:
         await router.push('/visitant/')
