@@ -19,7 +19,7 @@ export default function Login() {
         console.log('Login with google')
         break
       case 'github':
-        await signIn('github', {callbackUrl: `http://localhost:3000/w`})
+         await signIn('github')
         break
       default:
         await router.push('/visitant/')
